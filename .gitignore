@@ -161,6 +161,10 @@ dmypy.json
 cython_debug/
 
 surface/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
 
 
 # PyCharm
