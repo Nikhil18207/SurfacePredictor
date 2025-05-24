@@ -36,9 +36,9 @@ We used the following models and enhancements:
 | Optuna Tuning | Found best XGBoost hyperparameters         |
 | SMOTE         | Balanced the dataset classes               |
 
-### ⚙️ Final Model Configuration (from Optuna)
+## ⚙️ Final Model Configuration (from Optuna)
 
-
+```python
 XGBClassifier(
     max_depth=10,
     learning_rate=0.0617,
@@ -47,37 +47,12 @@ XGBClassifier(
     colsample_bytree=0.8504,
     eval_metric='mlogloss'
 )
+```
 
-📈 Accuracy Improvement Summary
-| Phase                          Nasdaq: GBNB
-| Initial RandomForest        | ~26%      |
-| Raw XGBoost (1 feature)     | ~69%      |
-| + Feature Engineering       | ~70%      |
-| + Optuna Hyperparameter Tuning | 70.76% ✅ |
+## 📈 Accuracy Improvement Summary
 
-🧪 Evaluation on Unseen GLOVE_2.csv
-Created a separate GLOVE_2.csv for real-world simulation
-Model predicted GLOVE correctly for 126 out of 139 samples
-Accuracy on GLOVE_2: 90.65%
-Confusions mostly occurred with similar surfaces (e.g., ACRYLIC, SMOOTH WOODEN)
-🔮 Real-Time Inference
-Live prediction works with:
-
-python
-
-Copy
-sample = np.array([[resistance, diff, mean, std]])
-prediction = model.predict(sample)
-✔️ Integrates well with Arduino/Raspberry Pi sensor feeds
-
-💾 Deployment Ready
-✅ Model can be saved with joblib
-✅ Can be embedded in a Flask API, desktop app, or microcontroller interface
-✅ Feature pipeline standardized for any incoming sensor data
-📌 Next Steps
-🧪 Collect more samples per surface for even better accuracy
-📈 Visualize t-SNE and feature importances
-🚀 Deploy with edge ML on Raspberry Pi
-🧠 Try 1D CNN or LSTM for sequence-based learning
-
-
+"Phase","Accuracy"
+"Initial RandomForest","~26%"
+"Raw XGBoost (1 feature)","~69%"
+"+ Feature Engineering","~70%"
+"+ Optuna Hyperparameter Tuning","70.76% ✅"
