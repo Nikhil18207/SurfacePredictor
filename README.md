@@ -38,7 +38,7 @@ We used the following models and enhancements:
 
 ### ⚙️ Final Model Configuration (from Optuna)
 
-```python
+
 XGBClassifier(
     max_depth=10,
     learning_rate=0.0617,
