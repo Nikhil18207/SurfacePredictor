@@ -51,8 +51,40 @@ XGBClassifier(
 
 ## 📈 Accuracy Improvement Summary
 
-"Phase","Accuracy"
-"Initial RandomForest","~26%"
-"Raw XGBoost (1 feature)","~69%"
-"+ Feature Engineering","~70%"
-"+ Optuna Hyperparameter Tuning","70.76% ✅"
+| Phase         | Notes                                      |
+|---------------|--------------------------------------------|
+| Random Forest | Initial baseline (~26% accuracy)           |
+| XGBoost       |  ~69% accuracy
+| Optuna Tuning | ~70% accuracy                              |
+| SMOTE         | 70.76% accuracy ✅                         | 
+
+##🧪 Evaluation on Unseen GLOVE_2.csv
+
+-> Created a separate GLOVE_2.csv for real-world simulation
+-> Model predicted GLOVE correctly for 126 out of 139 samples
+-> Accuracy on GLOVE_2: 90.65%
+-> Confusions mostly occurred with similar surfaces (e.g., ACRYLIC, SMOOTH WOODEN)
+
+## 🔮 Real-Time Inference
+
+Live prediction works with:
+
+```python
+sample = np.array([[resistance, diff, mean, std]])
+prediction = model.predict(sample)
+```
+✔️ Integrates well with Arduino/Raspberry Pi sensor feeds
+
+## 💾 Deployment Ready
+✅ Model can be saved with joblib
+✅ Can be embedded in a Flask API, desktop app, or microcontroller interface
+✅ Feature pipeline standardized for any incoming sensor data
+
+## 📌 Next Steps
+🧪 Collect more samples per surface for even better accuracy
+📈 Visualize t-SNE and feature importances
+🚀 Deploy with edge ML on Raspberry Pi
+🧠 Try 1D CNN or LSTM for sequence-based learning
+
+
+
