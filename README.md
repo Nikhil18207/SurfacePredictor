@@ -60,10 +60,10 @@ XGBClassifier(
 
 ##🧪 Evaluation on Unseen GLOVE_2.csv
 
--> Created a separate GLOVE_2.csv for real-world simulation
--> Model predicted GLOVE correctly for 126 out of 139 samples
--> Accuracy on GLOVE_2: 90.65%
--> Confusions mostly occurred with similar surfaces (e.g., ACRYLIC, SMOOTH WOODEN)
+- Created a separate GLOVE_2.csv for real-world simulation
+- Model predicted GLOVE correctly for 126 out of 139 samples
+- Accuracy on GLOVE_2: 90.65%
+- Confusions mostly occurred with similar surfaces (e.g., ACRYLIC, SMOOTH WOODEN)
 
 ## 🔮 Real-Time Inference
 
